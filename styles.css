@@ -74,10 +74,10 @@ body{
 /* Projects */
 .projects-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
 .project-card{border:1px solid var(--line); background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)); border-radius:12px; padding:18px; display:grid; gap:10px; position:relative; overflow:hidden}
-.project-card::after{content:""; position:absolute; right:-40px; top:-40px; width:160px; height:160px; background:radial-gradient(closest-side, rgba(255,77,46,.35), transparent 70%)}
+.project-card::after{content:""; position:absolute; right:-40px; top:-40px; width:160px; height:160px; background:radial-gradient(closest-side, rgba(255,77,46,.55), transparent 70%)}
 .project-meta{display:flex; align-items:baseline; gap:10px}
 .project-meta .mono{color:var(--accent)}
-.chip{display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border:1px solid var(--line); border-radius:999px; text-decoration:none; color:var(--text); background:transparent}
+/* .chip{display:inline-flex; align-items:center; gap:6px; padding:8px 12px; border:1px solid var(--line); border-radius:999px; text-decoration:none; color:var(--text); background:transparent} */
 .project-actions{display:flex; gap:8px}
 .project-card:hover{border-color:#2b2b33}
 
@@ -123,4 +123,32 @@ body{
   .hero-title{font-size:34px}
 }
 
+ .blinker {
+    animation: blink 0.7s step-start infinite;
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+/* Hover efecto vidrio naranja */
+.chip:hover {
+  background: var(--accent); /* naranja translúcido */
+  border-color: var(--accent);
+}
 
